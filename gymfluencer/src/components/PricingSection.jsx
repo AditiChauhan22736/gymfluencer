@@ -16,10 +16,10 @@ const PricingSection = () => {
       <motion.h2
         className="text-4xl md:text-6xl tracking-tighter font-bold text-center mb-12"
         data-scroll
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }} // Smaller movement
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }} // Reduced duration
       >
         Pricing Plans
       </motion.h2>
@@ -28,19 +28,23 @@ const PricingSection = () => {
         {plans.map((plan, index) => (
           <motion.div
             key={index}
-            className="pricing-card bg-white text-black font-bold rounded-lg p-6 shadow-lg text-center hover:shadow-xl transition-all duration-300"
+            className="pricing-card bg-white text-black font-bold rounded-lg p-6 shadow-lg text-center hover:shadow-xl transition-all duration-200"
             data-scroll
             data-scroll-speed="1"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }} // Smaller movement
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2, ease: "easeInOut" }}
+            transition={{
+              duration: 0.3, // Reduced duration
+              delay: index * 0.1, // Faster delay
+              ease: "easeInOut",
+            }}
           >
             <motion.h3
               className="text-2xl font-semibold mb-4"
-              initial={{ scale: 0.9 }}
+              initial={{ scale: 0.75 }} // Less scaling
               whileInView={{ scale: 1 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }} // Quicker scale transition
             >
               {plan.name}
             </motion.h3>
@@ -51,8 +55,8 @@ const PricingSection = () => {
               ))}
             </ul>
             <motion.button
-              className="mt-6 bg-red-700 text-black px-6 py-3 rounded-md font-semibold hover:bg-red-800 transition duration-300"
-              whileHover={{ scale: 1.1 }}
+              className="mt-6 bg-red-700 text-black px-6 py-3 rounded-md font-semibold hover:bg-red-800 transition duration-200"
+              whileHover={{ scale: 1.05 }} // Reduced hover scale
             >
               Choose Plan
             </motion.button>
