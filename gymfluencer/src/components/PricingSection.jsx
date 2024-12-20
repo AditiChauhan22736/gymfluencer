@@ -16,11 +16,10 @@ const PricingSection = () => {
       <motion.h2
         className="text-4xl md:text-6xl tracking-tighter font-bold text-center mb-12"
         data-scroll
-        data-scroll-speed="2"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         Pricing Plans
       </motion.h2>
@@ -35,13 +34,13 @@ const PricingSection = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, delay: index * 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.5, delay: index * 0.2, ease: "easeInOut" }}
           >
             <motion.h3
               className="text-2xl font-semibold mb-4"
               initial={{ scale: 0.9 }}
               whileInView={{ scale: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
             >
               {plan.name}
             </motion.h3>
