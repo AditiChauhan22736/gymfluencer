@@ -18,7 +18,7 @@ const Hero = () => {
       >
         {/* Animated <h1> with adjusted sizes */}
         <motion.h1
-          className="text-6xl sm:text-7xl md:text-8xl tracking-tight font-bold mb-4 text-red-700"
+          className="text-7xl sm:text-7xl md:text-8xl tracking-tight font-extrabold mb-4 text-red-700"
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
