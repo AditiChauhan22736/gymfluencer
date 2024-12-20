@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section
-      className="hero bg-cover bg-center font-Orbitron_Regular text-red-700 min-h-screen flex items-center justify-center relative pt-24 w-full" // Added pt-24 for sufficient padding on small screens
-      style={{ backgroundImage: 'url("https://framerusercontent.com/images/SGmk37b8TDX43mcsVuBwFTVon0Y.jpg?scale-down-to=2048")' }} // Replace with your image URL
+      className="hero bg-cover bg-center font-Orbitron_Regular text-red-700 min-h-screen flex items-center justify-center relative pt-24 w-full"
+      style={{ backgroundImage: 'url("https://framerusercontent.com/images/SGmk37b8TDX43mcsVuBwFTVon0Y.jpg?scale-down-to=2048")' }}
       data-scroll-section
     >
       {/* Dark Overlay to improve text visibility */}
@@ -16,9 +16,9 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* Animated <h1> with mobile responsiveness */}
+        {/* Animated <h1> with adjusted sizes */}
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-8xl tracking-tighter font-bold mb-4 text-red-700"
+          className="text-6xl sm:text-7xl md:text-8xl tracking-tighter font-bold mb-4 text-red-700"
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -28,7 +28,7 @@ const Hero = () => {
 
         {/* Animated <p> for introduction */}
         <motion.p
-          className="text-gray-100 tracking-tight text-base sm:text-lg md:text-xl mb-2"
+          className="text-lg sm:text-xl md:text-2xl tracking-tight text-gray-100 mb-2"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -38,7 +38,7 @@ const Hero = () => {
 
         {/* Animated <p> for the next line */}
         <motion.p
-          className="text-gray-100 tracking-tight text-base sm:text-lg md:text-xl mb-2"
+          className="text-lg sm:text-xl md:text-2xl tracking-tight text-gray-100 mb-2"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
@@ -48,7 +48,7 @@ const Hero = () => {
 
         {/* Animated <p> for the last line */}
         <motion.p
-          className="text-gray-100 tracking-tight text-base sm:text-lg md:text-xl mb-6"
+          className="text-lg sm:text-xl md:text-2xl tracking-tight text-gray-100 mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
